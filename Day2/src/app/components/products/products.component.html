@@ -1,0 +1,84 @@
+<div class="container">
+    <label for="">Category</label>
+    <select class="form-select mb-3" [(ngModel)]="selectedCategoryID">
+        <option selected value="0">All</option>
+        <option *ngFor="let category of categoryList" [value]="category.id">{{category.name}}</option>
+
+    </select>
+    <div>
+        Selected Category : {{selectedCategoryID}}
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="card me-5" style="width: 18rem;" *ngFor="let product of productsList"
+            [class.d-none]=" selectedCategoryID != product.categoryID && selectedCategoryID != 0"
+            [ngClass]="{'d-none': product.quantity == 0}"
+            [ngStyle]="{'box-shadow':'0 5px 7px -3px rgba(107, 13, 13, 0.4)'}"
+            [ngClass]="{'bg-warning': product.quantity==1}">
+            <img width="200px" height="200px" class="card-img-top" [src]="product.ImageURL">
+            <div class="card-body">
+                <h5 class="card-title mb-5">{{product.name}}</h5>
+                <h5 class="card-title">Price : {{product.price}}</h5>
+                <input #itemCount type="number" class="form-control-sm ">
+                <div class="text-danger" [ngSwitch]="product.quantity">
+                    <div *ngSwitchCase="0">out of stock</div>
+                    <div *ngSwitchCase="1">one item left</div>
+                    <div *ngSwitchCase="2">two items left</div>
+                </div>
+                <button class="btn btn-primary"
+                    (click)="buy(product.price,itemCount.value,product.quantity)">Buy</button>
+            </div>
+            <div> The total price ={{totalPrice}}</div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+
+
+
+<!-- <div class="container">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Image</td>
+                <td>Quantity</td>
+                <td>Category</td>
+                <td>Price</td>
+                <td>Count</td>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr [class.d-none]=" selectedCategoryID != product.categoryID && selectedCategoryID != 0  "
+                *ngFor="let product of productsList" [ngClass]="{'bg-warning': product.quantity==1}"
+                [hidden]="!product.quantity">
+                <td>{{product.id}}</td>
+                <td>{{product.name}}</td>
+                <td><img width="200px" height="200px" [src]="product.ImageURL"></td>
+                <td class="text-danger">{{product.quantity}}</td>
+                <td>{{product.categoryID}}</td>
+                <td>{{product.price}}</td>
+                <td><input #itemCount type="number" class="form-control-sm "></td>
+                <td><button class="btn btn-primary"
+                        (click)="buy(product.price,itemCount.value,product.quantity)">Buy</button></td>
+            </tr>
+        </tbody>
+        <div> The total price ={{totalPrice}}</div>
+    </table>
+</div> -->
+
+<!-- 
+<td class="text-danger" [ngSwitch]="product.quantity">
+    <div *ngSwitchCase="0">out of stock</div>
+    <div *ngSwitchCase="1">one item left</div>
+    <div *ngSwitchCase="2">two items left</div>
+</td> -->

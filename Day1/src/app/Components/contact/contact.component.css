@@ -1,0 +1,20 @@
+.contactme {
+    background-image: url("/assets/contact6.jpg");
+    /* background-attachment: fixed; */
+    background-position: center;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+
+}
+
+
+
+@media only screen and (min-width: 992px) {
+    .confon {
+
+        color: #e2e2e2;
+    }
+
+}

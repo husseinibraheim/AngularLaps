@@ -1,0 +1,92 @@
+.img-con {
+    position: relative;
+}
+
+.img-text {
+    position: absolute;
+    bottom: 48%;
+    left: 10%;
+    width: 90%;
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .img-text {
+        position: absolute;
+        bottom: 48%;
+        left: 10%;
+        width: 80%;
+    }
+
+    .img-text {
+        width: 80%;
+    }
+
+    .myFONT {
+        color: #212529;
+    }
+
+    .topban {
+        color: #212529;
+    }
+
+}
+
+.parts {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+}
+
+@media only screen and (min-width: 992px) {
+    .confon {
+
+        color: #e2e2e2;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .img-text {
+        position: absolute;
+        bottom: 10%;
+        left: 5%;
+        width: 80%;
+    }
+
+    .myFONT {
+        color: #212529;
+    }
+
+    .topban {
+        color: black;
+    }
+
+    .TES img {
+        max-width: 183px;
+        max-height: 122px;
+    }
+
+    .TEST {
+        max-height: 500px;
+        max-width: 300px;
+    }
+
+    .profpic img {
+        max-width: 300px;
+        max-height: 300px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .img-text {
+        width: 80%;
+    }
+
+    .myFONT {
+        color: #212529;
+    }
+
+    .topban {
+        color: #212529;
+    }
+}

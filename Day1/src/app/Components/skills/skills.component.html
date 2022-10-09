@@ -1,0 +1,25 @@
+<div class="container mt-5">
+    <hr>
+    <h1 id="SK" class="myfontc text-center parts ">Skills</h1>
+    <div class="row">
+        <div class="col-lg-1 col-md-0">
+        </div>
+        <div class="col-lg-5 col-md-6">
+            <div class="progcont mt-3" *ngFor="let course of courses">
+                <p>{{course.name}}</p>
+                <div class="progress myprog">
+                    <div class="progress-bar pbg text-light" role="progressbar" [style]="course.style"
+                        aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">{{course.progress}}</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-lg-5 col-md-6 col-sm-9 mt-5 ">
+            <img src="assets/skills.png" class="img-fluid rounded-3 ski" alt="...">
+
+
+        </div>
+
+    </div>
+</div>

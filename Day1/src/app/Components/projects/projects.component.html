@@ -1,0 +1,31 @@
+<div class="container mt-5">
+    <hr>
+    <h1 id="PR" class="myfontc text-center parts">Projects</h1>
+
+    <div class="container">
+        <div class="row mt-5">
+
+            <div class="col-md-5 col-lg-5 m-4 " *ngFor="let card of cards">
+                <div class="card-box">
+                    <div class="card-thumbnail">
+                        <img [src]="card.imgSrc" class="img-fluid" alt="">
+                    </div>
+                    <h3><a href="#" class="mt-2 myfontc">{{card.name}}</a></h3>
+                    <p class="text-secondary myfontc">{{card.text}}</p>
+                    <a href="#" class="btn btn-sm btn-outline-dark float-right">Read more >></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+</div>

@@ -1,0 +1,32 @@
+.myprog {
+    width: 60%;
+    height: 8%;
+    border-radius: 7px;
+    background: #a7abaf;
+}
+
+.myprog div {
+    color: #2c2e2d;
+    font-weight: 600;
+}
+
+.progcont p {
+    margin-bottom: 7px;
+}
+
+.progcont {
+    margin-bottom: 9px;
+}
+
+.pbg {
+    background: #445454;
+}
+
+
+.progbar {
+    background: #a7abaf;
+}
+
+.progcont p {
+    color: #445454;
+}
